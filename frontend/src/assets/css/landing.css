@@ -1,0 +1,297 @@
+/* File: assets/css/landing.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap'); /* Inter Black */
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+Link {
+    text-decoration: none;
+    color: white;   
+}
+
+/* HEADER CONTENT */
+.header-content {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.header-content .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header-content .headline {
+    margin-top: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.header-content .headline h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+    margin-bottom: 5px;
+}
+
+.header-content .headline p {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.transform-body {
+    color: white;
+    display: block;
+}
+
+.transform-life {
+    color: #FF0000;
+    display: block;
+}
+
+.header-content .buttons {
+    position: relative;
+    z-index: 2;
+}
+
+.header-content .buttons a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.header-content .buttons .get-started-btn {
+    background-color: #ff0000;
+}
+
+.header-content .buttons .get-started-btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+}
+
+.header-content .buttons .learn-more-btn {
+    background-color: #555;
+}
+
+.header-content .buttons .learn-more-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/* Why Choose SmartFit Section */
+.why-choose-smartfit {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-choose-smartfit-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.section {
+    background: #18181b;
+    width: 320px;
+    height: 278px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.why-choose-smartfit h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: white;
+}
+
+.section .description {
+    font-size: 16px;
+    color: #a6a6a6;
+    margin-top: 10px;
+}
+
+.section-icon {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 15px;
+    background-size: cover;
+}
+
+.discover-workouts .section-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+/* Locate Gym Section */
+.locate-gym {
+    background: black;
+    color: #FFFFFF;
+    padding: 60px 0;
+    width: 100%;
+    height: 800px;
+    justify-items: center;
+    align-content: center;
+}
+
+.locate-gym-container2 {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 50%;
+    margin-left: 70px;
+}
+
+.find-gym-text {
+    width: 100%;
+    height: 40%;
+}
+
+.find-gym-text h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.find-gym-text p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    color: #A6A6A6;
+    margin-bottom: 20px;
+}
+
+.land-search-bar {
+    width: 90%;
+    height: 15%;
+    display: flex;
+}
+
+.land-search-bar input {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 10px;
+    border-radius: 10px;
+    background-color: #848484;
+    color: white;
+    border: none;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    outline: none;
+}
+
+.land-search-bar input::placeholder {
+    color: white;
+}
+
+.search-button {
+    height: 100%;
+    width: 15%;
+    font-size: 10px;
+    background-color: #FF0000;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.result {
+    width: 75%;
+    height: 90%;
+    border-radius: 5px;
+    background-color: #27272A;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 780px) {
+    .header-content .headline h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content .headline p {
+        font-size: 1rem;
+    }
+
+    .header-content .buttons a {
+        padding: 10px 20px;
+    }
+
+    .header-content .headline h1 {
+        font-size: 2rem;
+    }
+
+    .why-choose-smartfit-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content .headline h1 {
+        font-size: 1.8rem;
+    }
+
+    .locate-gym-container2 {
+        margin-left: 20px;
+        max-width: 90%;
+    }
+
+    .find-gym-text h2 {
+        font-size: 36px;
+    }
+}

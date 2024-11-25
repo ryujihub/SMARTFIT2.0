@@ -1,0 +1,270 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #000000;
+}
+
+/* App container */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* Height of the header */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
+}
+
+/* Header styles */
+.header {
+  background-color: #18181B;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
+
+.brand a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.smart {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.fit {
+  color: #FF0000;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  z-index: 1001;
+}
+
+.nav-link a, 
+.nav-link button {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link a:hover, 
+.nav-link button:hover {
+  color: #FF0000;
+}
+
+.nav-link a.active {
+  color: #FF0000;
+}
+
+.nav-link a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #FF0000;
+}
+
+.user-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1001;
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FF0000;
+  transform: translateY(-2px);
+}
+
+.Welcome-user {
+  color: white;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  background-color: #27272A;
+  border-radius: 20px;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002;
+}
+
+/* Footer styles */
+.footer-container {
+  background-color: #18181B;
+  color: white;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #FF0000;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .social-icons {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem 0;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #18181B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link a, 
+  .nav-link button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .user-menu {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .social-icons {
+    order: 2;
+  }
+
+  .Welcome-user {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .smart, .fit {
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .nav-link a, 
+  .nav-link button {
+    font-size: 0.9rem;
+  }
+}

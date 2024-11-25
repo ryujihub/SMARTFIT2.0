@@ -1,0 +1,141 @@
+.calculator-container {
+  min-height: 100vh;
+  background-color: black;
+  padding: 2rem;
+  padding-top: 90px;
+}
+
+.calculator-header {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.calculator-header h1 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.calculator-header p {
+  font-size: 1.2rem;
+  color: #848484;
+}
+
+.calculator-grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.calculator-card {
+  background: #27272A;
+  border-radius: 12px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+}
+
+.calculator-card h2 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  background: #18181B;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #FF0000;
+}
+
+.input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background: #18181B;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  appearance: none;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #FF0000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.calculate-btn:hover {
+  background: #cc0000;
+}
+
+.result {
+  background: #18181B;
+  padding: 1.5rem;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+}
+
+.result h3 {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.result p {
+  color: #848484;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.result span {
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .calculator-card {
+    padding: 1.5rem;
+  }
+}
